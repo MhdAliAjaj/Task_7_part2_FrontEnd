@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*-----------------------------------task 1-----------------------------------*/
+.contianer{
+    padding: 50px 100px;
+}
+.part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.part1 .text h1{
+    margin-bottom: 30px;
+    max-width: 200px;
+}
+.part1 img{
+  max-width: 200px;
+}
+.div_images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div_images  img {
+    height: 150px;
+    margin: 30px 30px;
+    cursor: pointer;
+}
+/*-----------------------------------task 2-----------------------------------*/

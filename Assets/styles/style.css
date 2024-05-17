@@ -1,32 +1,135 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 /*-----------------------------------task 1-----------------------------------*/
-.contianer{
-    padding: 50px 100px;
+.contianer {
+  padding: 50px 100px;
 }
-.part1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.part1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.part1 .text h1{
-    margin-bottom: 30px;
-    max-width: 200px;
-}
-.part1 img{
+.part1 .text h1 {
+  margin-bottom: 30px;
   max-width: 200px;
 }
-.div_images{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.part1 img {
+  max-width: 200px;
 }
-.div_images  img {
-    height: 150px;
-    margin: 30px 30px;
-    cursor: pointer;
+.div_images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div_images img {
+  height: 150px;
+  margin: 30px 30px;
+  cursor: pointer;
 }
 /*-----------------------------------task 2-----------------------------------*/
+.contianer2 {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.contianer2 h1,
+p {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sec2 {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+  
+}
+
+.sec2 button{
+border: none;
+background-color: initial;
+cursor: pointer;
+
+}
+/*-----------------------------------task 3-----------------------------------*/
+.sec3 .contianer3 div{
+    margin: 10px 0;
+}
+.accordion {
+    background-color: #def4cd;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #def4cd;
+}
+
+.accordion:after {
+    /* content: '\002B'; */
+    font-family: FontAwesome;
+    content: '\f077';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    font-family: FontAwesome;
+    content: "\f078";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+/*-----------------------------------task 4-----------------------------------*/
+.sec4{
+    background-color: #023852;
+    height: 100vh;
+}
+.sec4 .container4{
+    margin: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+.container4 .container-star{
+    padding: 40px;
+}
+.container4 p{
+    font-size: 20px;
+}
+.container4 .container-star span i{
+    cursor: pointer;
+}

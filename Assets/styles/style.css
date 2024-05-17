@@ -116,7 +116,7 @@ cursor: pointer;
     height: 100vh;
 }
 .sec4 .container4{
-    margin: 200px;
+    margin: 200px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,10 +126,22 @@ cursor: pointer;
 }
 .container4 .container-star{
     padding: 40px;
+    
 }
 .container4 p{
     font-size: 20px;
 }
 .container4 .container-star span i{
     cursor: pointer;
+}
+
+.rating__star {
+  font-size: 1.3em;
+  cursor: pointer;
+  color: #dabd18b2;
+  transition: filter linear .3s;
+}
+
+.rating__star:hover {
+  filter: drop-shadow(1px 1px 4px gold);
 }

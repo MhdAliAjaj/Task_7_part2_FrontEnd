@@ -55,43 +55,36 @@ for (var i = 0; i < accordions.length; i++) {
 }
 
 ///////////////////////////////////////Task 4///////////////////////////////////////
-// const star1_inp=document.querySelectorAll('.star');
 
-// star1_inp.addEventListener('click',(event)=>{
-//     star1_inp.style.color="#fed600";
-// });
+const ratingStars = [...document.getElementsByClassName("rating__star")];
+const ratingResult = document.querySelector(".rating__result");
 
+printRatingResult(ratingResult);
 
-const star1_inp=document.querySelector('#star1');
+function executeRating(stars, result) {
+   const starClassActive = "rating__star fas fa-star";
+   const starClassUnactive = "rating__star far fa-star";
+   const starsLength = stars.length;
+   let i;
+   stars.map((star) => {
+      star.onclick = () => {
+         i = stars.indexOf(star);
 
-star1_inp.addEventListener('mouseover',(event)=>{
-    
-    
-        // star1_inp.style.color.rgb(254, 214, 0);
-        star1_inp.style.color="#fed600";
- 
-});
+         if (star.className.indexOf(starClassUnactive) !== -1) {
+            printRatingResult(result, i + 1);
+            for (i; i >= 0; --i) stars[i].className = starClassActive;
+         } else {
+            printRatingResult(result, i);
+            for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
+         }
+      };
+   });
+}
 
+function printRatingResult(result, num = 0) {
+   result.textContent = `${num}/5`;
+   // ratingResult.innerHTML=result.textContent;
+   console.log(result.textContent)
+}
 
-
-
-const star2_inp=document.querySelector('#star2');
-
-star2_inp.addEventListener('mouseover',(event)=>{
-    star2_inp.style.color="#fed600";
-});
-const star3_inp=document.querySelector('#star3');
-
-star3_inp.addEventListener('mouseover',(event)=>{
-    star3_inp.style.color="#fed600";
-});
-const star4_inp=document.querySelector('#star4');
-
-star4_inp.addEventListener('mouseover',(event)=>{
-    star4_inp.style.color="#fed600";
-});
-const star5_inp=document.querySelector('#star5');
-
-star5_inp.addEventListener('mouseover',(event)=>{
-    star5_inp.style.color="#fed600";
-});
+executeRating(ratingStars, ratingResult);
